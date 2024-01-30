@@ -1,0 +1,12 @@
+@charset "UTF-8";
+/* CSS Document */
+
+h1.temp {
+	font-family: courier;
+	font-size: 30px;
+	color: #CECECE;
+}
+
+img.space {
+	margin-top: 100px;	
+}
