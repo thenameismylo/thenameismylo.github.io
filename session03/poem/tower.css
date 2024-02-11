@@ -6,6 +6,7 @@ p {
 	font-weight: 400;
 	font-size: 24px;
 	color: #F2F2F2;
+	padding-left: 15px;
 
 }
 
@@ -20,7 +21,6 @@ p {
 	display: inline-block;
 	text-align: left;
 	background-color: #021859;
-	padding-left: 15px;
 	}
 	
 
@@ -36,6 +36,7 @@ p {
 	padding-bottom: 18px;
 	display: inline-block;
 	color: #F2E085;
+	padding-left: 15px;
 }
 
 .subHead {
@@ -44,6 +45,7 @@ p {
 	font-weight: 400;
 	font-style: italic;
 	color: #F2E085;
+	padding-left: 15px;
 }
 
 body {
