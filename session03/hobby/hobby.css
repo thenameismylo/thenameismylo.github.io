@@ -1,0 +1,64 @@
+@charset "UTF-8";
+/* CSS Document */
+
+p {
+	font-family: 'Roboto', sans-serif;
+	font-weight: 300;
+	font-size: 18px;
+	color: #1E1E1E;
+	padding-left: 15px;
+
+}
+
+.verseNo {
+	font-family: 'Cormorant Garamond', serif;
+	font-weight: 600;
+	font-size: 20px;
+}
+
+.page {
+	max-width: 800px;
+	display: inline-block;
+	text-align: left;
+	background-color: #CDCDCD;
+	
+	
+	}
+	
+
+.outside {
+	text-align: center;
+	max-width: inherit;
+	}
+
+.head {
+	font-family: 'Archivo Black', sans-serif;
+	font-size: 30px;
+	font-weight: 400;
+	padding-bottom: 18px;
+	display: inline-block;
+	color: #1E1E1E;
+	padding-left: 15px;
+}
+
+.subHead {
+	font-family: 'Archivo Black', sans-serif;
+	font-size: 20px;
+	font-weight: 400;
+	color: #1E1E1E;
+	padding-left: 15px;
+}
+
+body {
+	background-color: #000000;
+}
+
+.imgHead {
+	width: 100%;
+}
+
+.bodyImg{
+	height: 200px;
+	width: 200px;
+	float: right;
+}
