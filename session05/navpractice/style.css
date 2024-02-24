@@ -1,0 +1,69 @@
+
+body{
+  margin:0;  
+  padding:0;
+  font-family: Impact, Haettenschweiler, "Franklin Gothic Bold", "Arial Black", "sans-serif";
+  font-size: 18px;
+}
+
+.outer{
+   text-align: center;
+   padding:20px;
+}
+.page{
+   width:800px;
+   height:95vh;
+   display: inline-block;
+   text-align:left;
+   padding:10px;
+   background-color: white;
+}
+a{
+  color:black;
+  font-size:16px;
+  font-weight: bold;
+  text-decoration: none;
+  margin-right:50px;
+}
+
+a:hover {
+  color:red;  
+ }
+  a:active {
+  color:#CCC;
+}
+.nav{
+  font-family: "Permanent Marker", cursive;
+  font-weight: 400;
+  font-style: normal;
+  margin-left:10px;
+  margin-top:10px;
+  text-align: right;
+}
+
+.flex-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.current {
+  font-family: "Permanent Marker", cursive;
+  font-weight: 400;
+  font-style: normal;
+   margin-left:10px;
+   margin-top:10px;
+   text-align: right;
+   text-decoration: underline;
+   color: #8B8B8B
+}
+
+  
+	  
