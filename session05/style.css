@@ -1,0 +1,115 @@
+
+body{
+  margin:0;  
+  padding:0;
+  background-color: #000;
+  font-family: arial, san-serif;
+}
+
+.outer{
+   text-align: center;
+   padding:20px;
+	
+}
+
+.nav {
+	display: flex;
+	border: medium;
+	border-color: aqua;
+  	justify-content: space-between;
+	padding-left: 10px;
+	padding-right: 10px;
+  	background-color: #000;
+	padding-top: 10px;
+	padding-bottom: 15px;
+}
+
+.page{
+   height: 99vh;
+   display: inline-block;
+   text-align:left;
+   padding:0px;
+   background-color: white;
+	width: 100%;
+}
+
+
+
+.logo {
+	max-height: 75px;
+}
+
+.WeatherIcon {
+	margin-right: 5px;
+	margin-top: 10px;
+}
+
+.logo-bar {
+	max-height: 75px;
+	background-color: red;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.navlink {
+	font-family: Sans-Serif;	
+	font-weight: bold;
+	font-size: 20px;
+	color: #fff;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+.DateAndTime {
+	display: flex;
+	flex-direction: column;
+	margin-left: 25px;
+	background-color: red;
+	font-weight: 700;
+	font-family: Sans-Serif;
+	font-size: 16px;
+	font-color: #fff;
+	padding-right: 10px;
+	color: #fff;
+	padding-top: 10px;
+
+}
+
+.date {
+	display: flex;
+}
+
+.icon {
+	display: inline-block;
+	flex-direction: row;
+	text-align: right;
+	vertical-align: center;
+}
+
+.topbar {
+	display: flex;
+	justify-content: space-between;
+	background-color: red;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.iconimg {
+	margin-top: 5px;
+	margin-right: 5px;
+}
+
+.login {
+	display: inline-block;
+	flex-direction: row;
+	width: 150px;
+	text-align: right;
+	border-color: #000;
+	color: #fff;
+}
+
+.loginIcon {
+	margin-left: 5px;
+	height: 20px;
+}
+	  
