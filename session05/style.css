@@ -14,13 +14,11 @@ body{
 
 .nav {
 	display: flex;
-	border: medium;
-	border-color: aqua;
   	justify-content: space-between;
 	padding-left: 10px;
 	padding-right: 10px;
   	background-color: #000;
-	padding-top: 10px;
+	padding-top: 15px;
 	padding-bottom: 15px;
 }
 
