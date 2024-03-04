@@ -1,0 +1,235 @@
+
+body{
+  margin:0;  
+  padding:0;
+  background-color: #000;
+  font-family: arial, san-serif;
+}
+
+.outer{
+	position: relative;
+	dislay: inline-block;
+	text-align: center;
+	padding:20px;
+}
+
+.page{
+	display: inline-block;
+	position: relative;
+	height: 99vh;
+	text-align:left;
+	padding: 0;
+	background-color: white;
+	width: 100%;
+	margin: 0;
+	color: #000;
+}
+
+.topbar {
+	display: flex;
+	justify-content: space-between;
+	background-color: red;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	width: 100%
+}
+
+.logo {
+	max-height: 75px;
+}
+
+.DateAndTime {
+	display: flex;
+	flex-direction: column;
+	background-color: red;
+	font-weight: 700;
+	font-family: Sans-Serif;
+	font-size: 16px;
+	font-color: #fff;
+	padding-right: 10px;
+	color: #fff;
+	padding-top: 10px;
+
+}
+
+.WeatherIcon {
+	margin-right: 5px;
+	margin-top: 10px;
+}
+
+.logo-bar {
+	max-height: 75px;
+	background-color: red;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+
+.nav {
+	display: flex;
+	justify-content: space-between;
+	padding-left: 10px;
+	padding-right: 10px;
+  	background-color: #000;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	width: 100%;
+}
+
+a.navlink {
+	font-family: Sans-Serif;	
+	font-weight: bold;
+	font-size: 20px;
+	color: #fff;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+
+a.navlink:hover {
+	color: red;
+}
+
+
+.login {
+	display: inline-block;
+	flex-direction: row;
+	width: 150px;
+	text-align: right;
+	border-color: #000;
+	color: #fff;
+	margin-right: 25px;
+}
+
+.loginIcon {
+	margin-left: 5px;
+	height: 20px;
+}
+
+a.loginLink {
+	font-family: Sans-Serif;	
+	font-weight: bold;
+	font-size: 12px;
+	color: #fff;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+a.loginLink:hover {
+	color: red;
+}
+
+
+
+
+.date {
+	display: flex;
+}
+
+.icon {
+	display: inline-block;
+	flex-direction: row;
+	text-align: right;
+	vertical-align: center;
+}
+
+.iconimg {
+	margin-top: 5px;
+	margin-right: 5px;
+}
+
+
+
+#menu {
+	display: none;
+}
+	
+.overlay {
+	display: none;
+}
+
+#innermenu {
+	width: 100%;
+	font-family: sans-serif;
+	font-weight: bold;
+	font-size: 20px;
+	color: #fff;
+	text-decoration: none;
+	text-transform: uppercase;
+	background-color: #000;
+	padding-bottom: 15px;
+	padding-left: 25px;
+	margin-left: 25px;
+	display: none;
+}
+
+#innermenu a {
+	font-family: Sans-Serif;	
+	font-weight: bold;
+	font-size: 20px;
+	color: #fff;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+#innermenu a:hover {
+	font-family: Sans-Serif;	
+	font-weight: bold;
+	font-size: 20px;
+	color: red;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+#close {
+	display: none;
+}
+
+@media screen and (max-width: 800px) {
+	body {
+		background-color: #000;
+	}
+	
+	.DateAndTime {
+		display: none;
+	}
+	
+	.navlink {
+		display: none;
+	}
+	
+	.logo {
+		height: 50px;
+		Width: '*';
+		margin-top: 10px;
+	}
+	
+	#menu {
+		display: inline-block;
+		color: #fff;
+		width: 30px;
+	}
+	
+	#menu img {
+		width: 25px;
+		height: '*';
+		margin: 0;
+		padding: 0;
+	}
+	
+	.overlay {
+		display:flex;
+		flex-direction: row;
+		background-color: #000;
+	}
+	
+	#close {
+		display: block;
+		float: right;
+			
+	}
+	
+}
+
+	
