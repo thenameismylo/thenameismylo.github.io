@@ -6,7 +6,6 @@ body {
 	padding: 0;
 }
 
-/* Hero Tile*/
 .heroTile {
 	max-widthn: 1000px; 
 	width: 100%;
@@ -41,8 +40,6 @@ body {
 	max-width: 1000px;
 	width: 100%;
 }
-
-/* Front page carousel*/
 
 .frontPageCarouselOuter {
 	font-family: "Arial", "sans-serif";
@@ -99,8 +96,6 @@ body {
 	max-height: '*';
 }
 
-/* Story component*/
-
 .story {
 	max-width: 800px;
 	width: 100%;
@@ -123,8 +118,6 @@ body {
 	float: left;
 	margin-right: 5px;
 }
-
-/* Side bar component */
 
 
 .sidebar { 
@@ -214,7 +207,6 @@ body {
 	margin-bottom: 10px;
 	}
 
-/* Will fill out later, just for sizing */
 
 @media screen and (max-width: 800px) {
 	
