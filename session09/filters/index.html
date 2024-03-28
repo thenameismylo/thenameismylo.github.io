@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Filters</title>
+
+	<style>
+.my_filter {
+    -webkit-filter: saturate(2);
+	 transition: filter 1s ease; 
+}
+
+.my_filter:hover {
+    animation: 10s myfilteranimation backwards;
+}
+
+@keyframes myfilteranimation {
+    
+    100% {
+        filter: grayscale(1) contrast(100%);
+    }
+}
+
+
+
+
+	</style>
+</head>
+<body>
+
+<img class="my_filter" src="img/flower.jpg" alt="flower">
+
+</body>
+</html>
