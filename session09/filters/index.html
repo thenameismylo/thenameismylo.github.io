@@ -5,18 +5,20 @@
 
 	<style>
 .my_filter {
-    -webkit-filter: saturate(2);
-	 transition: filter 1s ease; 
+    -webkit-filter: saturate(100%);
+	filter: saturate(100%);
+	 
 }
 
 .my_filter:hover {
-    animation: 10s myfilteranimation backwards;
+    animation: 10s myfilteranimation forwards;
 }
 
 @keyframes myfilteranimation {
     
     100% {
-        filter: grayscale(1) contrast(100%);
+      -webkit-filter: grayscale(100%) contrast(100%);
+		filter: grayscale(100%) contrast(100%);
     }
 }
 
