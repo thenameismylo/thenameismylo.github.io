@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Financial Aid Icons - March 2025</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background-color: white;
+      color: black;
+      margin: 40px;
+    }
+    h1 {
+      text-align: center;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin-top: 20px;
+    }
+    .icon {
+      text-align: center;
+    }
+    img {
+      width: 150px;
+      height: 150px;
+      object-fit: contain;
+    }
+  </style>
+</head>
+<body>
+  <h1>Financial Aid Icons - March 2025</h1>
+  <div class="gallery">
+    <!-- Icons will be displayed here -->
+    <script>
+      const iconNames = [
+        'bubblecons_analytics_1_money-26-icon-outline.png',
+        'bubblecons_brainstorming_money-21-icon-outline.png',
+        'bubblecons_casino_casino-15-icon-outline.png',
+        'bubblecons_casino_money-stacked-38-icon-outline.png',
+        'bubblecons_family_1_credit-33-icon-outline.png',
+        'bubblecons_payment_cash-payment-12-icon-outline.png',
+        'bubblecons_payment_coin-money-31-icon-outline.png',
+        'bubblecons_payment_cut-discount-6-icon-outline.png',
+        'bubblecons_payment_economy-15-icon-outline.png',
+        'bubblecons_payment_money-calculate-45-icon-outline.png',
+        'bubblecons_time_1_time-gets-money-17-icon-outline.png',
+        'bubblecons_time_1_time-is-money-18-icon-outline.png',
+        'smashicons_sales_1_calculator-61-icon-outline.png',
+        'smashicons_sales_1_wallet-30-icon-outline.png',
+        'smashicons_startup_1_laptop-payment-49-icon-outline.png',
+        'tiny-icons_business_3_receive-money-10-icon-soft-outline.png'
+      ];
+
+      const gallery = document.querySelector('.gallery');
+
+      iconNames.forEach(name => {
+        const iconDiv = document.createElement('div');
+        iconDiv.classList.add('icon');
+        iconDiv.innerHTML = `
+          <img src="financial-aid-icons/${name}" alt="${name}" />
+          <p>${name}</p>
+        `;
+        gallery.appendChild(iconDiv);
+      });
+    </script>
+  </div>
+</body>
+</html>
