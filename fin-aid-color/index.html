@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Financial Aid Icons - March 2025</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background-color: white;
+      color: black;
+      margin: 40px;
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 200px;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin-top: 20px;
+    }
+    .icon {
+      text-align: center;
+    }
+    img {
+      width: 150px;
+      height: 150px;
+      object-fit: contain;
+      border: 5px solid black;
+    }
+  </style>
+</head>
+<body>
+  <h1>Financial Aid Icons - March 2025</h1>
+  <div class="gallery">
+    <!-- Icons will be displayed here -->
+    <script>
+      const iconNames = [
+        'wallet.png',
+        'calculator-and-arrow.png',
+        'calculator-and-coin.png',
+        'calculator.png',
+        'clock-and-coins.png',
+        'hand-and-coins.png',
+        'piggy-bank.png'
+      ];
+
+      const gallery = document.querySelector('.gallery');
+
+      iconNames.forEach(name => {
+        const iconDiv = document.createElement('div');
+        iconDiv.classList.add('icon');
+        iconDiv.innerHTML = `
+          <img src="png-color/${name}" alt="${name}" />
+          <p>${name}</p>
+        `;
+        gallery.appendChild(iconDiv);
+      });
+    </script>
+  </div>
+</body>
+</html>
