@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Exit Interview Times</title>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500&family=Roboto:wght@400&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/luxon@3/build/global/luxon.min.js"></script>
+  <style>
+    body {
+      background-color: #1e1e1e;
+      font-family: "IBM Plex Sans", "Roboto", sans-serif;
+      color: #f0f0f0;
+      margin: 0;
+      padding: 40px;
+      display: flex;
+      justify-content: center;
+    }
+    .container {
+      background: #2c2c2c;
+      padding: 30px 40px;
+      border-radius: 8px;
+      max-width: 600px;
+      width: 100%;
+    }
+    h1 {
+      font-weight: 500;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    label {
+      display: block;
+      margin-top: 15px;
+      font-size: 0.95rem;
+    }
+    input, select, button {
+      width: 100%;
+      margin-top: 5px;
+      padding: 10px;
+      font-size: 1rem;
+      border-radius: 4px;
+      border: none;
+    }
+    button {
+      background-color: #007acc;
+      color: white;
+      margin-top: 20px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #005f99;
+    }
+    .results {
+      margin-top: 30px;
+      font-size: 18px;
+    }
+    .result-time {
+      margin-top: 10px;
+    }
+    .recalc {
+      margin-top: 20px;
+      border-top: 1px solid #444;
+      padding-top: 20px;
+    }
+  </style>
+</head>
+<body onload="setDefaultDateTime()">
+  <div class="container">
+    <h1>Exit Interview Times</h1>
+
+    <label for="base-zone">Select Base Timezone</label>
+    <select id="base-zone">
+      <option value="America/New_York">NYC (Eastern)</option>
+      <option value="Europe/London">London</option>
+      <option value="Australia/Sydney">Sydney</option>
+    </select>
+
+    <label for="date">Date</label>
+    <input type="date" id="date" />
+
+    <label for="time">Time</label>
+    <input type="time" id="time" />
+
+    <button onclick="convertTime()">Convert</button>
+
+    <div class="results" id="results" style="display:none;">
+      <h3>Converted Times</h3>
+      <div id="converted"></div>
+
+      <div class="recalc">
+        <label for="custom-zone">Recalculate for Another Timezone</label>
+        <select id="custom-zone">
+          <option value="UTC">UTC</option>
+          <option value="America/Los_Angeles">Los Angeles (Pacific)</option>
+          <option value="Europe/Paris">Paris</option>
+          <option value="Asia/Tokyo">Tokyo</option>
+          <option value="Asia/Kolkata">India</option>
+          <option value="Africa/Johannesburg">Johannesburg</option>
+        </select>
+        <button onclick="recalculate()">Recalculate</button>
+        <div class="result-time" id="custom-result"></div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const DateTime = luxon.DateTime;
+
+    function setDefaultDateTime() {
+      const nowNY = DateTime.now().setZone("America/New_York");
+      document.getElementById("date").value = nowNY.toISODate();
+      document.getElementById("time").value = nowNY.toFormat("HH:mm");
+    }
+
+    function convertTime() {
+      const baseZone = document.getElementById("base-zone").value;
+      const date = document.getElementById("date").value;
+      const time = document.getElementById("time").value;
+
+      if (!date || !time) {
+        alert("Please enter both date and time.");
+        return;
+      }
+
+      const dt = DateTime.fromISO(`${date}T${time}`, { zone: baseZone });
+
+      const zones = [
+        { label: "Sydney", zone: "Australia/Sydney" },
+        { label: "London", zone: "Europe/London" },
+        { label: "NYC", zone: "America/New_York" },
+      ];
+
+      const filtered = zones.filter(z => z.zone !== baseZone);
+
+      const out = filtered.map(({ label, zone }) => {
+        const converted = dt.setZone(zone);
+        return `<div class="result-time"><strong>${label}:</strong> ${converted.toFormat("cccc, LLLL d, yyyy — h:mm a ZZZZ")}</div>`;
+      }).join("");
+
+      document.getElementById("converted").innerHTML = out;
+      document.getElementById("results").style.display = "block";
+      document.getElementById("custom-result").innerHTML = "";
+    }
+
+    function recalculate() {
+      const baseZone = document.getElementById("base-zone").value;
+      const date = document.getElementById("date").value;
+      const time = document.getElementById("time").value;
+      const customZone = document.getElementById("custom-zone").value;
+
+      if (!date || !time) return;
+
+      const dt = DateTime.fromISO(`${date}T${time}`, { zone: baseZone });
+      const converted = dt.setZone(customZone);
+
+      document.getElementById("custom-result").innerHTML = 
+        `<strong>${customZone}:</strong> ${converted.toFormat("cccc, LLLL d, yyyy — h:mm a ZZZZ")}`;
+    }
+  </script>
+</body>
+</html>
